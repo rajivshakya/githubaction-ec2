@@ -19,3 +19,14 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Logs
+crash.log
+
+# CLI config
+.terraformrc
+terraform.rc
