@@ -8,6 +8,9 @@ resource "aws_instance" "my_instance" {
   metadata_options {
     http_tokens = "required"
   }
+  root_block_device {
+    encrypted = true
+  }
   tags = {
     Name : "Web-Server"
   }
