@@ -31,29 +31,33 @@ resource "aws_instance" "my_instance" {
 
 resource "aws_security_group" "web_sg" {
   name        = "nginx-sg"
-  description = "Allow HTTP and SSH"
+  description = "Allow HTTP and restricted SSH"
 
+  # 🌐 HTTP (public website ke liye open)
   ingress {
-    description = "HTTP"
+    description = "Allow HTTP"
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["0.0.0.0/0"]   # ✔ required
   }
 
+  # 🔐 SSH (sirf tumhare IP se)
   ingress {
-    description = "SSH"
+    description = "Allow SSH from my IP"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] # ⚠️ production me restrict karte hain
+
+    cidr_blocks = ["106.219.150.52/32"]   
   }
 
+  # 📤 Outbound (generally open rehta hai)
   egress {
+    description = "Allow all outbound traffic"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
