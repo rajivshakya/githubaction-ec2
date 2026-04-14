@@ -39,7 +39,7 @@ resource "aws_security_group" "web_sg" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]   # ✔ required
+    cidr_blocks = ["0.0.0.0/0"] # ✔ required
   }
 
   # 🔐 SSH (sirf tumhare IP se)
@@ -49,7 +49,7 @@ resource "aws_security_group" "web_sg" {
     to_port     = 22
     protocol    = "tcp"
 
-    cidr_blocks = ["106.219.150.52/32"]   
+    cidr_blocks = ["106.219.150.52/32"]
   }
 
   # 📤 Outbound (generally open rehta hai)
