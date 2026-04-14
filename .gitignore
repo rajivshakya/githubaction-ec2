@@ -30,3 +30,6 @@ crash.log
 # CLI config
 .terraformrc
 terraform.rc
+
+#bootstap
+bootstrap/
