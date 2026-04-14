@@ -12,11 +12,11 @@ provider "aws" {
 }
 
 resource "aws_instance" "my_instance" {
-  ami           = var.ami_id
-  instance_type = var.instance_type
-  key_name = "aws-key"
+  ami                    = var.ami_id
+  instance_type          = var.instance_type
+  key_name               = "aws-key"
   vpc_security_group_ids = [aws_security_group.web_sg.id]
-  user_data = file("nginx.sh")
+  user_data              = file("nginx.sh")
   metadata_options {
     http_tokens = "required"
   }
@@ -46,7 +46,7 @@ resource "aws_security_group" "web_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]  # ⚠️ production me restrict karte hain
+    cidr_blocks = ["0.0.0.0/0"] # ⚠️ production me restrict karte hain
   }
 
   egress {
