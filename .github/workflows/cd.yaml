@@ -19,5 +19,5 @@ jobs:
           aws-region: ap-south-1
     - name: Terraform Init
       run: terraform init
-    - name: Terraform apply
-      run: terraform apply -auto-approve
+    - name: Terraform destroy
+      run: terraform destroy -auto-approve
