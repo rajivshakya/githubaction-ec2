@@ -1,0 +1,555 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\WINDOWS\system32> cd "D:\Rajiv Shakya\Tutorial\GiTHub Action"
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action> ls
+
+
+    Directory: D:\Rajiv Shakya\Tutorial\GiTHub Action
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        13-04-2026     17:15                gitops-demo
+d-----        13-04-2026     16:39                gitops-eks
+d-----        08-04-2026     14:51                terraform-ec2-github-actions
+d-----        08-04-2026     16:25                terraform-ec2-github-actions1
+d-----        08-04-2026     16:45                terraform-ec2-github-actions2
+-a----        07-04-2026     14:41          20604 End-to-End MoP Terraform_GitHub Actions_AWS EC2.docx
+-a----        08-04-2026     15:09          18432 GitHub Action Tutorial.docx
+-a----        06-04-2026     09:07          19283 GitHub Action.docx
+-a----        06-04-2026     09:00          19160 GitHub Token.docx
+-a----        06-04-2026     17:23          14452 Mo P_ Git Hub Actions Ci Pipeline With Docker & Trivy (1).docx
+
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action> ls
+
+
+    Directory: D:\Rajiv Shakya\Tutorial\GiTHub Action
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        13-04-2026     17:15                gitops-demo
+d-----        13-04-2026     16:39                gitops-eks
+d-----        08-04-2026     14:51                terraform-ec2-github-actions
+d-----        08-04-2026     16:25                terraform-ec2-github-actions1
+d-----        08-04-2026     16:45                terraform-ec2-github-actions2
+-a----        07-04-2026     14:41          20604 End-to-End MoP Terraform_GitHub Actions_AWS EC2.docx
+-a----        08-04-2026     15:09          18432 GitHub Action Tutorial.docx
+-a----        06-04-2026     09:07          19283 GitHub Action.docx
+-a----        06-04-2026     09:00          19160 GitHub Token.docx
+-a----        06-04-2026     17:23          14452 Mo P_ Git Hub Actions Ci Pipeline With Docker & Trivy (1).docx
+
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action> git --version
+git version 2.53.0.windows.2
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action> git clone https://github.com/rajivshakya/githubaction-ec2.git
+Cloning into 'githubaction-ec2'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action> ls
+
+
+    Directory: D:\Rajiv Shakya\Tutorial\GiTHub Action
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        13-04-2026     21:00                githubaction-ec2
+d-----        13-04-2026     17:15                gitops-demo
+d-----        13-04-2026     16:39                gitops-eks
+d-----        08-04-2026     14:51                terraform-ec2-github-actions
+d-----        08-04-2026     16:25                terraform-ec2-github-actions1
+d-----        08-04-2026     16:45                terraform-ec2-github-actions2
+-a----        07-04-2026     14:41          20604 End-to-End MoP Terraform_GitHub Actions_AWS EC2.docx
+-a----        08-04-2026     15:09          18432 GitHub Action Tutorial.docx
+-a----        06-04-2026     09:07          19283 GitHub Action.docx
+-a----        06-04-2026     09:00          19160 GitHub Token.docx
+-a----        06-04-2026     17:23          14452 Mo P_ Git Hub Actions Ci Pipeline With Docker & Trivy (1).docx
+
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action> cd .\githubaction-ec2\
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> ls
+
+
+    Directory: D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        13-04-2026     21:00             38 README.md
+
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git branch
+* master
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> ls
+
+
+    Directory: D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        13-04-2026     21:19                .terraform
+-a----        13-04-2026     21:16            212 .gitignore
+-a----        13-04-2026     21:19           1377 .terraform.lock.hcl
+-a----        13-04-2026     21:26            205 main.tf
+-a----        13-04-2026     21:13             60 output.tf
+-a----        13-04-2026     21:00             38 README.md
+-a----        13-04-2026     21:27            309 variable.tf
+
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git branch
+* master
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git checkout -b feature/demo
+Switched to a new branch 'feature/demo'
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git branch
+* feature/demo
+  master
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git init
+Reinitialized existing Git repository in D:/Rajiv Shakya/Tutorial/GiTHub Action/githubaction-ec2/.git/
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> ls
+
+
+    Directory: D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        13-04-2026     21:19                .terraform
+-a----        13-04-2026     21:16            212 .gitignore
+-a----        13-04-2026     21:19           1377 .terraform.lock.hcl
+-a----        13-04-2026     21:26            205 main.tf
+-a----        13-04-2026     21:13             60 output.tf
+-a----        13-04-2026     21:00             38 README.md
+-a----        13-04-2026     21:27            309 variable.tf
+
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git add .
+warning: in the working copy of '.terraform.lock.hcl', LF will be replaced by CRLF the next time Git touches it
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git status
+On branch feature/demo
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        new file:   .terraform.lock.hcl
+        new file:   main.tf
+        new file:   output.tf
+        new file:   variable.tf
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git branch
+* feature/demo
+  master
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git checkout master
+A       .gitignore
+A       .terraform.lock.hcl
+A       main.tf
+A       output.tf
+A       variable.tf
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git branch
+  feature/demo
+* master
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git add .
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git commit -m "First Commit to the Master branch"
+[master d4515e3] First Commit to the Master branch
+ 5 files changed, 74 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .terraform.lock.hcl
+ create mode 100644 main.tf
+ create mode 100644 output.tf
+ create mode 100644 variable.tf
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git push origin -u master^C
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git log
+commit d4515e3b03d2cec6749bfd7d8476a22cb70c82b2 (HEAD -> master)
+Author: Rajiv Shakya <rajivshaky@gmail.com>
+Date:   Mon Apr 13 21:34:54 2026 +0530
+
+    First Commit to the Master branch
+
+commit 06a26ae6c40c2abfdc33af2d3d5d520fccfedc78 (origin/master, origin/HEAD, feature/demo)
+Author: rajivshakya <89643654+rajivshakya@users.noreply.github.com>
+Date:   Mon Apr 13 20:52:42 2026 +0530
+
+    Initial commit
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>  git push origin -u master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.70 KiB | 218.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/rajivshakya/githubaction-ec2.git
+   06a26ae..d4515e3  master -> master
+branch 'master' set up to track 'origin/master'.
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> ls
+
+
+    Directory: D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        13-04-2026     21:19                .terraform
+-a----        13-04-2026     21:16            212 .gitignore
+-a----        13-04-2026     21:19           1377 .terraform.lock.hcl
+-a----        13-04-2026     21:26            205 main.tf
+-a----        13-04-2026     21:13             60 output.tf
+-a----        13-04-2026     21:00             38 README.md
+-a----        13-04-2026     21:27            309 variable.tf
+
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git branch
+  feature/demo
+* master
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git checkout feature/demo
+Switched to branch 'feature/demo'
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git branch
+* feature/demo
+  master
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git add .
+warning: in the working copy of '.terraform/providers/registry.terraform.io/hashicorp/aws/6.40.0/windows_amd64/LICENSE.txt', LF will be replaced by CRLF the next time Git touches it
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git commit -m "Commit to feature/demo branch"
+[feature/demo 9d8420f] Commit to feature/demo branch
+ 2 files changed, 375 insertions(+)
+ create mode 100644 .terraform/providers/registry.terraform.io/hashicorp/aws/6.40.0/windows_amd64/LICENSE.txt
+ create mode 100644 .terraform/providers/registry.terraform.io/hashicorp/aws/6.40.0/windows_amd64/terraform-provider-aws_v6.40.0_x5.exe
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git push origin -u feature/demo
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> cd ..
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action> git clone https://github.com/rajivshakya/githubaction-ec2.git
+fatal: destination path 'githubaction-ec2' already exists and is not an empty directory.
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action> ls
+
+
+    Directory: D:\Rajiv Shakya\Tutorial\GiTHub Action
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        13-04-2026     21:42                githubaction-ec2
+d-----        13-04-2026     17:15                gitops-demo
+d-----        13-04-2026     16:39                gitops-eks
+d-----        08-04-2026     14:51                terraform-ec2-github-actions
+d-----        08-04-2026     16:25                terraform-ec2-github-actions1
+d-----        08-04-2026     16:45                terraform-ec2-github-actions2
+-a----        07-04-2026     14:41          20604 End-to-End MoP Terraform_GitHub Actions_AWS EC2.docx
+-a----        08-04-2026     15:09          18432 GitHub Action Tutorial.docx
+-a----        06-04-2026     09:07          19283 GitHub Action.docx
+-a----        06-04-2026     09:00          19160 GitHub Token.docx
+-a----        06-04-2026     17:23          14452 Mo P_ Git Hub Actions Ci Pipeline With Docker & Trivy (1).docx
+
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action> ls
+
+
+    Directory: D:\Rajiv Shakya\Tutorial\GiTHub Action
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        13-04-2026     17:15                gitops-demo
+d-----        13-04-2026     16:39                gitops-eks
+d-----        08-04-2026     14:51                terraform-ec2-github-actions
+d-----        08-04-2026     16:25                terraform-ec2-github-actions1
+d-----        08-04-2026     16:45                terraform-ec2-github-actions2
+-a----        07-04-2026     14:41          20604 End-to-End MoP Terraform_GitHub Actions_AWS EC2.docx
+-a----        08-04-2026     15:09          18432 GitHub Action Tutorial.docx
+-a----        06-04-2026     09:07          19283 GitHub Action.docx
+-a----        06-04-2026     09:00          19160 GitHub Token.docx
+-a----        06-04-2026     17:23          14452 Mo P_ Git Hub Actions Ci Pipeline With Docker & Trivy (1).docx
+
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action> git clone https://github.com/rajivshakya/githubaction-ec2.git
+Cloning into 'githubaction-ec2'...
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 10 (delta 0), reused 7 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (10/10), done.
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action> ls
+
+
+    Directory: D:\Rajiv Shakya\Tutorial\GiTHub Action
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        13-04-2026     21:48                githubaction-ec2
+d-----        13-04-2026     17:15                gitops-demo
+d-----        13-04-2026     16:39                gitops-eks
+d-----        08-04-2026     14:51                terraform-ec2-github-actions
+d-----        08-04-2026     16:25                terraform-ec2-github-actions1
+d-----        08-04-2026     16:45                terraform-ec2-github-actions2
+-a----        07-04-2026     14:41          20604 End-to-End MoP Terraform_GitHub Actions_AWS EC2.docx
+-a----        08-04-2026     15:09          18432 GitHub Action Tutorial.docx
+-a----        06-04-2026     09:07          19283 GitHub Action.docx
+-a----        06-04-2026     09:00          19160 GitHub Token.docx
+-a----        06-04-2026     17:23          14452 Mo P_ Git Hub Actions Ci Pipeline With Docker & Trivy (1).docx
+
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action> git githubaction-ec2
+git: 'githubaction-ec2' is not a git command. See 'git --help'.
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action> cd githubaction-ec2
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> ls
+
+
+    Directory: D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        13-04-2026     21:48            212 .gitignore
+-a----        13-04-2026     21:48           1401 .terraform.lock.hcl
+-a----        13-04-2026     21:48            205 main.tf
+-a----        13-04-2026     21:48             60 output.tf
+-a----        13-04-2026     21:48             38 README.md
+-a----        13-04-2026     21:48            309 variable.tf
+
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> ls
+
+
+    Directory: D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        13-04-2026     21:50            332 .gitignore
+-a----        13-04-2026     21:48           1401 .terraform.lock.hcl
+-a----        13-04-2026     21:48            205 main.tf
+-a----        13-04-2026     21:48             60 output.tf
+-a----        13-04-2026     21:48             38 README.md
+-a----        13-04-2026     21:48            309 variable.tf
+
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git branch
+* master
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git checkout -b feature/demo
+Switched to a new branch 'feature/demo'
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git add .
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git commit -m "Commit to Feature Branch"
+[feature/demo 1164eb6] Commit to Feature Branch
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git status
+On branch feature/demo
+nothing to commit, working tree clean
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> ls
+
+
+    Directory: D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        13-04-2026     21:50            332 .gitignore
+-a----        13-04-2026     21:48           1401 .terraform.lock.hcl
+-a----        13-04-2026     21:48            205 main.tf
+-a----        13-04-2026     21:48             60 output.tf
+-a----        13-04-2026     21:48             38 README.md
+-a----        13-04-2026     21:48            309 variable.tf
+
+
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git log
+commit 1164eb61f14f72d5a1b180b9aea64896e767cf0f (HEAD -> feature/demo)
+Author: Rajiv Shakya <rajivshaky@gmail.com>
+Date:   Mon Apr 13 21:51:28 2026 +0530
+
+    Commit to Feature Branch
+
+commit d4515e3b03d2cec6749bfd7d8476a22cb70c82b2 (origin/master, origin/HEAD, master)
+Author: Rajiv Shakya <rajivshaky@gmail.com>
+Date:   Mon Apr 13 21:34:54 2026 +0530
+
+    First Commit to the Master branch
+
+commit 06a26ae6c40c2abfdc33af2d3d5d520fccfedc78
+Author: rajivshakya <89643654+rajivshakya@users.noreply.github.com>
+Date:   Mon Apr 13 20:52:42 2026 +0530
+
+    Initial commit
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git push feature/demo
+fatal: 'feature/demo' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git push origin feature/demo
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 333 bytes | 166.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'feature/demo' on GitHub by visiting:
+remote:      https://github.com/rajivshakya/githubaction-ec2/pull/new/feature/demo
+remote:
+To https://github.com/rajivshakya/githubaction-ec2.git
+ * [new branch]      feature/demo -> feature/demo
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git add .
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git branch
+* feature/demo
+  master
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git commit "readme file update"
+error: pathspec 'readme file update' did not match any file(s) known to git
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git commit -m "readme file update"
+[feature/demo 0043fa9] readme file update
+ 1 file changed, 2 insertions(+)
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git push origin feature/demo
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 297 bytes | 99.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rajivshakya/githubaction-ec2.git
+   1164eb6..0043fa9  feature/demo -> feature/demo
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git add .
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git commit -m "workflow add"
+[feature/demo ea81f17] workflow add
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 .github/workflows/cd.yaml
+ create mode 100644 .github/workflows/ci.yaml
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git push origin feature/demo
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 366 bytes | 122.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rajivshakya/githubaction-ec2.git
+   0043fa9..ea81f17  feature/demo -> feature/demo
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git branch
+* feature/demo
+  master
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git add .
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git commit -m "CI.yaml & CD.yaml update"
+[feature/demo f4751c4] CI.yaml & CD.yaml update
+ 2 files changed, 52 insertions(+)
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git push origin feature/demo
+Enumerating objects: 11, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 1.06 KiB | 362.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/rajivshakya/githubaction-ec2.git
+   ea81f17..f4751c4  feature/demo -> feature/demo
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git add .
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git commit -m "Formating Change"
+[feature/demo fa01630] Formating Change
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git push origin feature/demo
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 372 bytes | 186.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/rajivshakya/githubaction-ec2.git
+   f4751c4..fa01630  feature/demo -> feature/demo
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git add .
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git commit -m "tfsec issue fix"
+[feature/demo e9958aa] tfsec issue fix
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git push origin feature/demo
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 341 bytes | 341.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/rajivshakya/githubaction-ec2.git
+   fa01630..e9958aa  feature/demo -> feature/demo
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git add .
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git commit -m "tfsec issue fix2"
+[feature/demo bb86e01] tfsec issue fix2
+ 1 file changed, 3 insertions(+)
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git push origin feature/demo
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 332 bytes | 332.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/rajivshakya/githubaction-ec2.git
+   e9958aa..bb86e01  feature/demo -> feature/demo
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git add .
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git commit -m "Server Name Change"
+[feature/demo ce3a58a] Server Name Change
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2> git push origin feature/demo
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 310 bytes | 103.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/rajivshakya/githubaction-ec2.git
+   bb86e01..ce3a58a  feature/demo -> feature/demo
+PS D:\Rajiv Shakya\Tutorial\GiTHub Action\githubaction-ec2>

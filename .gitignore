@@ -26,7 +26,11 @@ Thumbs.db
 
 # Logs
 crash.log
+session.logs
 
 # CLI config
 .terraformrc
 terraform.rc
+
+#bootstap
+bootstrap/
