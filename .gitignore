@@ -26,6 +26,7 @@ Thumbs.db
 
 # Logs
 crash.log
+session.logs
 
 # CLI config
 .terraformrc
