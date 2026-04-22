@@ -5,11 +5,12 @@ set -ex   # 👈 IMPORTANT (fail fast + debug)
 apt update -y
 apt install -y nginx unzip wget
 
+cd /usr/share/nginx/html/
+rm -rf *
 cd /var/www/html
 rm -rf *
 # ✅ default nginx page remove
 rm -f index.nginx-debian.html
-
 
 # download
 wget https://freewebsitetemplates.com/download/space-science/space-science.zip -O site.zip
